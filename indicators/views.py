@@ -2,6 +2,19 @@ from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+import requests
+import time
+
+
+def request_to_main_api(request_text):
+    while True:
+        try:
+            response__ = requests.get(request_text)
+            return response__
+        except Exception as error:
+            print("Main api can't response, in line 31 error is: " + str(error))
+            print("Bot will go sleep for 60 seconds!")
+            time.sleep(60)
 
 
 @api_view(['POST'])
