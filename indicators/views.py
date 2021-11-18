@@ -6,6 +6,7 @@ import requests
 import time
 from decimal import Decimal
 
+
 def request_to_main_api(request_text):
     while True:
         try:
@@ -21,7 +22,7 @@ def request_to_main_api(request_text):
 def atr(request):
     symbol = request.data['symbol']
     interval = request.data['interval']
-    request_atr = "https://api2.binance.com/api/v3/klines?symbol=" + symbol + "&interval=" + str(interval) + "&limit=1000"
+    request_atr = "https://api2.binance.com/api/v3/klines?symbol=" + str(symbol).upper() + "&interval=" + str(interval).lower() + "&limit=1000"
     response_atr = request_to_main_api(request_atr)
     data_atr = response_atr.json()
     # print(data)
