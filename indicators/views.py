@@ -12,9 +12,9 @@ def request_to_main_api(request_text):
             response__ = requests.get(request_text)
             return response__
         except Exception as error:
-            print("Main api can't response, in line 31 error is: " + str(error))
-            print("Bot will go sleep for 60 seconds!")
-            time.sleep(60)
+            print("Main api can't response, in line 15 error is: " + str(error))
+            print("Bot will go sleep for 10 seconds!")
+            time.sleep(10)
 
 
 @api_view(['POST'])
