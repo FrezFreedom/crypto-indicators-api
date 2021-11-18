@@ -19,7 +19,9 @@ def request_to_main_api(request_text):
 
 @api_view(['POST'])
 def atr(request):
-    request_atr = "https://api2.binance.com/api/v3/klines?symbol=" + "BTCUSDT" + "&interval=" + "4h" + "&limit=1000"
+    symbol = request.data['symbol']
+    interval = request.data['interval']
+    request_atr = "https://api2.binance.com/api/v3/klines?symbol=" + symbol + "&interval=" + str(interval) + "&limit=1000"
     response_atr = request_to_main_api(request_atr)
     data_atr = response_atr.json()
     # print(data)
@@ -36,5 +38,5 @@ def atr(request):
         atr_pre = atr_
 
     return Response({
-        "message": atr_
+        "value": atr_
     }, status=status.HTTP_200_OK)
