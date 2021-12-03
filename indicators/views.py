@@ -83,6 +83,66 @@ nemoone chizi ke pass mide:
 }
 
 address refrence : https://taapi.io/indicators/candle/
+'''
 
 
+
+
+
+
+
+
+'''
+bollinger band
+
+refrence : https://taapi.io/indicators/bollinger-bands-another-implementation/
+
+nemoone chizi ke tahesh mide 
+
+{
+    "valueUpperBand": 39541.935773866826,
+    "valueMiddleBand": 37920.27099999998,
+    "valueLowerBand": 36298.60622613313,
+    "backtrack": 0
+  }
+
+variable hayi ke migire:
+ejbari :
+
+1-secret : ino vaghti api key mixay tappi mifreste va ma nadarim tu codemoon ehtemalan
+
+2-exchange : ke masalan binance ya okex ya ... va ma dar avale kar faghat binance e
+
+3-symbol : ke che arzi ro mixay
+
+4- interval : ke che time yi bashe candle masalan 15m, 30m, 1h, 4h, 1d ,...
+
+ekhtiari ha :
+
+1-backtrack : mige az alan chand candle ghablo behem begoo, agar hichi nazad candl alano mige
+agar khast candle ghablio bebine 1 mizane va 5 candle ghabl 5, yek saghf ham gozashte taapi ke
+balaye 50 nemishe zad va default gozashte 0
+
+2-backtracks : age chand candle akhar ro bekham mizani backtracks va meghdaro midi masalan 2 taye akhar mishe
+"backtracks = 2"
+
+3-chart : candle ha ro mishe be anvae mokhtalef rasm kard ye model darim esmesh "heikinashi" e ke open candle
+avalin moamele nist miad ru miangin open o close candle ghabli. tu in motheghayer mige age nazadi chizi 
+candle ro mige, agar zadi heikinashi meghdare heikinashi ro mixoone mide.
+
+4-period : toole bazeyi ke az ruye oon meghdare andicator bara har noghte hesab mishe va age nade 
+defaultesh 20 e
+
+5-stddev : standard deviation e ke default 2 e
+
+mohasebe :
+
+middle band mishe miangine close baraye candle haye period dade shode (20 default)
+
+upper band mishe miangine close candle haye period ( ke hamoon midle band e) + (be alave) 
+(stddev * standard deviation hamin candle ha ( 20 ta default ) )
+
+lower band ham mishe hamoon ghable faghat menha mikoni
+
+age backtracks ham bede zire result bayad data bargarde ke in male candle chandome
 '''
