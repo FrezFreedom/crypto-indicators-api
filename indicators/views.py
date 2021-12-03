@@ -70,5 +70,19 @@ balaye 50 nemishe zad va default gozashte 0
 avalin moamele nist miad ru miangin open o close candle ghabli. tu in motheghayer mige age nazadi chizi 
 candle ro mige, agar zadi heikinashi meghdare heikinashi ro mixoone mide.
 
+nemoone chizi ke pass mide:
+
+{
+  "timestampHuman": "2021-01-14 15:00:00 (Thursday) UTC",
+  "timestamp": 1610636400,
+  "open": 39577.53,
+  "high": 39666,
+  "low": 39294.7,
+  "close": 39607.09,
+  "volume": 1211.2841909999893
+}
+
+address refrence : https://taapi.io/indicators/candle/
+
 
 '''
